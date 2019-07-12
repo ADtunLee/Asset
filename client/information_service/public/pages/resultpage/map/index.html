@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Include styles -->
+  <!-- Bootstrap 4 styles -->
+  <link rel="stylesheet" href="../../../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../vendor/bootstrap-toogle/bootstrap4-toggle.min.css">
+  <link rel="stylesheet" href="../../../vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/partials/map/bootstrap-tagsinput.css">
+  <!-- Styles for pages -->
+  <link rel="stylesheet" type="text/css" href="../../../assets/stylesheets/index.css">
+  <link rel="stylesheet" type="text/css" href="../../../assets/stylesheets/pages/_home.css">
+  <link rel="stylesheet" type="text/css" href="../../../assets/stylesheets/pages/_map.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/partials/map/filterBar.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/partials/chat/chatSideBar.css">
+
+  <!-- Swiper -->
+  <!-- Include scripts -->
+  <script type="text/javascript" src="../../../vendor/jquery/jquery-3.2.1.slim.min.js"></script>
+  </script>
+  <script type="text/javascript" src="../../../vendor/popper.js/popper.min.js"></script>
+  <script type="text/javascript" src="../../../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../../vendor/bootstrap-toogle/bootstrap4-toggle.min.js"></script>
+
+  <title>Bản đồ</title>
+</head>
+
+<body>
+  <div class="container-fluid d-none d-xl-block">
+    <div class="row flex-xl-nowrap">
+      <div class="col-4 bd-sidebar section-map__result" style="max-width: 455px">
+        <div class="map-result-container">
+          <div class="search-input-container d-flex align-items-center">
+            <div class="search-menu">
+              <button class="drawer-toggler" data-toggle="modal" data-target="#drawerToggleExternalContent"
+                aria-controls="drawerToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="../../../assets/img/SVG/menu.svg" alt="">
+              </button>
+            </div>
+            <div class="search-input">
+              <input placeholder="Search..." type="text" />
+            </div>
+            <div class="search-icon">
+              <img src="../../../assets/img/SVG/search.svg" alt="">
+            </div>
+          </div>
+          <div class="seperate border-bottom mt-4 mb-2"></div>
+          <div class="search-filter-container ml-2">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle search-filter--btn" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sắp xếp theo
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <div class="search-result-container">
+            <div class="search-result__item">
+              <div class="row item-container">
+                <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                </div>
+                <div class="col-8 item-details">
+                  <div class="row item-price">
+                    <p class="border-right price">7,5 triệu</p>
+                    <p class="border-right acreage">60,78m2</p>
+                    <p class="ratio">10 x 6,8m</p>
+                  </div>
+                  <div class="item-type">
+                    <p>CĂN HỘ CHUNG CƯ</p>
+                  </div>
+                  <div class="row item-info">
+                    <p class="border-right">Thuê</p>
+                    <p class="border-right">Số tờ 30</p>
+                    <p>Số thửa - -</p>
+                  </div>
+                  <div class="row item-detail">
+                    <p>
+                      <img src="../../../assets/img/SVG/bed.svg" alt=""> 10
+                    </p>
+                    <p>
+                      <img src="../../../assets/img/SVG/shower.svg" alt=""> 20
+                    </p>
+                    <p>
+                      <img src="../../../assets/img/SVG/direction.svg" alt=""> Đông Nam
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search-result__item">
+              <div class="row item-container">
+                <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                </div>
+                <div class="col-8 item-details">
+                  <div class="row item-price">
+                    <p class="border-right price">7,5 triệu</p>
+                    <p class="border-right acreage">60,78m2</p>
+                    <p class="ratio">10 x 6,8m</p>
+                  </div>
+                  <div class="item-type">
+                    <p>CĂN HỘ CHUNG CƯ</p>
+                  </div>
+                  <div class="row item-info">
+                    <p class="border-right">Thuê</p>
+                    <p class="border-right">Số tờ 30</p>
+                    <p>Số thửa - -</p>
+                  </div>
+                  <div class="row item-detail">
+                    <p>
+                      <img src="../../../assets/img/SVG/bed.svg" alt=""> 10
+                    </p>
+                    <p>
+                      <img src="../../../assets/img/SVG/shower.svg" alt=""> 20
+                    </p>
+                    <p>
+                      <img src="../../../assets/img/SVG/direction.svg" alt=""> Đông Nam
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search-result__item">
+              <div class="row item-container">
+                <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                </div>
+                <div class="col-8 item-details">
+                  <div class="row item-price">
+                    <p class="border-right price">7,5 triệu</p>
+                    <p class="border-right acreage">60,78m2</p>
+                    <p class="ratio">10 x 6,8m</p>
+                  </div>
+                  <div class="item-type">
+                    <p>CĂN HỘ CHUNG CƯ</p>
+                  </div>
+                  <div class="row item-info">
+                    <p class="border-right">Thuê</p>
+                    <p class="border-right">Số tờ 30</p>
+                    <p>Số thửa - -</p>
+                  </div>
+                  <div class="row item-detail">
+                    <p>
+                      <img src="../../../assets/img/SVG/bed.svg" alt=""> 10
+                    </p>
+                    <p>
+                      <img src="../../../assets/img/SVG/shower.svg" alt=""> 20
+                    </p>
+                    <p>
+                      <img src="../../../assets/img/SVG/direction.svg" alt=""> Đông Nam
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search-result__item">
+              <div class="row item-container">
+                <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                </div>
+                <div class="col-8 item-details">
+                  <div class="row item-price">
+                    <p class="border-right price">7,5 triệu</p>
+                    <p class="border-right acreage">60,78m2</p>
+                    <p class="ratio">10 x 6,8m</p>
+                  </div>
+                  <div class="item-type">
+                    <p>CĂN HỘ CHUNG CƯ</p>
+                  </div>
+                  <div class="row item-info">
+                    <p class="border-right">Thuê</p>
+                    <p class="border-right">Số tờ 30</p>
+                    <p>Số thửa - -</p>
+                  </div>
+                  <div class="row item-detail">
+                    <p>
+                      <img src="../../../assets/img/SVG/bed.svg" alt=""> 10
+                    </p>
+                    <p>
+                      <img src="../../../assets/img/SVG/shower.svg" alt=""> 20
+                    </p>
+                    <p>
+                      <img src="../../../assets/img/SVG/direction.svg" alt=""> Đông Nam
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search-result__item">
+              <div class="row item-container">
+                <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                </div>
+                <div class="col-8 item-details">
+                  <div class="row item-price">
+                    <p class="border-right price">7,5 triệu</p>
+                    <p class="border-right acreage">60,78m2</p>
+                    <p class="ratio">10 x 6,8m</p>
+                  </div>
+                  <div class="item-type">
+                    <p>CĂN HỘ CHUNG CƯ</p>
+                  </div>
+                  <div class="row item-info">
+                    <p class="border-right">Thuê</p>
+                    <p class="border-right">Số tờ 30</p>
+                    <p>Số thửa - -</p>
+                  </div>
+                  <div class="row item-detail">
+                    <p>
+                      <img src="../../../assets/img/SVG/bed.svg" alt=""> 10
+                    </p>
+                    <p>
+                      <img src="../../../assets/img/SVG/shower.svg" alt=""> 20
+                    </p>
+                    <p>
+                      <img src="../../../assets/img/SVG/direction.svg" alt=""> Đông Nam
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MAP MAINT CONTENT -->
+      <main class="col-8 bd-content section-map__content" style="background-image: url('../../../assets/img/map.png')">
+        <div class="map__content h-100">
+          <!-- FILTER BAR FOR MAP -->
+          <div id="filterBar" class="h-100">
+            <div class="filterBar__container">
+              <div class="filterbar__content">
+                <div class="w-100 filterBar__top d-flex justify-content-between">
+                  <div class="filterBar__top--additional">
+                    <div class="top-additional">
+                      <div class="top-additional__container">
+                        <div class="top-additional__content">
+                          <div class="row">
+                            <!-- Filter Type -->
+                            <div id="filterType" class="top-additional--filter filter-type">
+                              <div class="filter__content d-flex align-items-center">
+                                <div id="filter-type" class="filter--text filter-type--text">Dự án</div>
+                                <div class="filter-type--switch d-flex align-items-center">
+                                  <div class="btn-switch">
+                                    <div class="btn-switch__container">
+                                      <div class="btn-switch__content d-flex align-items-center">
+                                        <input id="filter__switch-type" type="checkbox" checked data-toggle="toggle"
+                                          data-on="Dự án" data-off="BĐS" data-style="btn-switch__input" data-width="49"
+                                          data-height="18">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- FILTERS FOR PROJECT -->
+                            <div id="filters-project" class="d-flex filters-project show">
+                              <!-- Filter Category -->
+                              <div id="filterCategory" class="top-additional--filter filter-category">
+                                <div class="d-flex align-items-center filter__content">
+                                  <div class="dropdown-toggle filter--text filter-category--text text--center"
+                                    data-toggle="dropdown">Loại dự án</div>
+                                  <div class="dropdown-menu">
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-apartment">
+                                          <label class="form-check-label" for="dropdownCheck-apartment">
+                                            Chung Cư
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-city">
+                                          <label class="form-check-label" for="dropdownCheck-city">
+                                            Đô thị
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-resort">
+                                          <label class="form-check-label" for="dropdownCheck-resort">
+                                            Nghỉ dưỡng
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Filter Price -->
+                              <div id="filterPrice" class="top-additional--filter filter-price">
+                                <div class="d-flex align-items-center filter__content">
+                                  <div class="dropdown-toggle filter--text filter-price--text text--center"
+                                    data-toggle="dropdown">Mức giá</div>
+                                  <div class="dropdown-menu">
+                                    <div class="input-group flex-nowrap">
+                                      <input type="text" placeholder="Min" class="form-control">
+                                      <input type="text" placeholder="Max" class="form-control">
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>5 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>10 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>15 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>20 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>25 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>30 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>35 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>40 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>45 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>50 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>55 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>60 triệu</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Filter Status -->
+                              <div id="filterStatus" class="top-additional--filter filter-status">
+                                <div class="d-flex align-items-center filter__content">
+                                  <div class="dropdown-toggle filter--text filter-status--text text--center"
+                                    data-toggle="dropdown">Tình trạng</div>
+                                  <div class="dropdown-menu">
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-inprogress">
+                                          <label class="form-check-label" for="dropdownCheck-inprogress">
+                                            Đang làm
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-done">
+                                          <label class="form-check-label" for="dropdownCheck-done">
+                                            Đã bàn giao
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-waiting">
+                                          <label class="form-check-label" for="dropdownCheck-waiting">
+                                            Chưa làm
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Filter Invesment -->
+                              <div id="filterInvesment" class="top-additional--filter filter-invesment">
+                                <div class="d-flex align-items-center filter__content">
+                                  <div class="dropdown-toggle filter--text filter-status--text text--center"
+                                    data-toggle="dropdown">Chủ đầu tư</div>
+                                  <div class="dropdown-menu">
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <input type="text" placeholder="Ex: Thắng lợi group">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Filter More -->
+                              <div id="filterMore" class="top-additional--filter filter-more">
+                                <div class="d-flex align-items-center filter__content">
+                                  <div class="dropdown-toggle filter--text filter-more--text text--center"
+                                    data-toggle="dropdown">Thêm</div>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <div class="handover-time">
+                                          <div class="dropdown-item--title handover-time--title">Thời gian bàn giao
+                                          </div>
+                                          <div class="d-flex">
+                                            <div class="handover-time--input-date">
+                                              <input class="w-100" type="text" placeholder="Dd/mm/yy">
+                                            </div>
+                                            <div class="form-check handover-time--checkbox-before">
+                                              <input type="checkbox" name="time-before" class="form-check-input"
+                                                id="dropdownCheck-before">
+                                              <label class="form-check-label" for="dropdownCheck-before">
+                                                Trước
+                                              </label>
+                                            </div>
+                                            <div class="form-check handover-time--checkbox-after">
+                                              <input type="checkbox" name="time-before" class="form-check-input"
+                                                id="dropdownCheck-after">
+                                              <label class="form-check-label" for="dropdownCheck-after">
+                                                Sau
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <div class="category-info">
+                                          <div class="dropdown-item--title category-info--title">Loại chi tiết</div>
+                                          <div class="d-flex" role="menu">
+                                            <select class="category-info__select custom-select" id="selectCategoryInfo">
+                                              <option selected>Vui lòng chọn</option>
+                                              <option value="1">Không có khối đế</option>
+                                              <option value="2">Hướng ngoại</option>
+                                              <option value="3" selected>Không phân loại</option>
+                                              <option value="4">Có khối đế</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <div class="filter-more__tags">
+                                          <div class="dropdown-item--title category-info--title">Từ khoá</div>
+                                          <div class="d-flex"><input type="text" value="nghỉ dưỡng, Mặt tiền"
+                                              data-role="tagsinput"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- END FILTERS FOR PROPERTIES -->
+                            <!-- FILTER FOR PROPERTIES -->
+                            <div id="filters-properties" class="d-flex filters-properties">
+                              <!-- Filter Trading -->
+                              <div id="filterTrading" class="top-additional--filter filter-trading">
+                                <div class="d-flex align-items-center filter__content">
+                                  <div class="dropdown-toggle filter--text filter-trading--text text--center"
+                                    data-toggle="dropdown">Loại giao dịch</div>
+                                  <div class="dropdown-menu">
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-sales">
+                                          <div class="form-check-icon"></div>
+                                          <label class="form-check-label" for="dropdownCheck-sales">
+                                            BĐS Bán
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-rent">
+                                          <div class="form-check-icon form-check-rent"></div>
+                                          <label class="form-check-label" for="dropdownCheck-rent">
+                                            BĐS Thuê
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-saled">
+                                          <div class="form-check-icon form-check-saled"></div>
+                                          <label class="form-check-label" for="dropdownCheck-saled">
+                                            Đã bán
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Filter Price -->
+                              <div id="filterPrice" class="top-additional--filter filter-price">
+                                <div class="d-flex align-items-center filter__content">
+                                  <div class="dropdown-toggle filter--text filter-price--text text--center"
+                                    data-toggle="dropdown">Mức giá</div>
+                                  <div class="dropdown-menu">
+                                    <div class="input-group flex-nowrap">
+                                      <input type="text" placeholder="Min" class="form-control">
+                                      <input type="text" placeholder="Max" class="form-control">
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>5 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>10 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>15 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>20 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>25 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>30 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>35 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>40 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>45 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>50 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>55 triệu</span>
+                                      </div>
+                                    </div>
+                                    <!-- Dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <span>60 triệu</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Filter Rooms -->
+                              <div id="filterRoom" class="top-additional--filter filter-room">
+                                <div class="d-flex align-items-center filter__content">
+                                  <div class="dropdown-toggle filter--text filter-room--text text--center"
+                                    data-toggle="dropdown">Tình trạng</div>
+                                  <div class="dropdown-menu">
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-room-0">
+                                          <label class="form-check-label" for="dropdownCheck-room-0">
+                                            0 +
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-room-1">
+                                          <label class="form-check-label" for="dropdownCheck-room-1">
+                                            1 +
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-room-2">
+                                          <label class="form-check-label" for="dropdownCheck-room-2">
+                                            2 +
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-room-3">
+                                          <label class="form-check-label" for="dropdownCheck-room-3">
+                                            3 +
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-room-4">
+                                          <label class="form-check-label" for="dropdownCheck-room-4">
+                                            4 +
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-room-5">
+                                          <label class="form-check-label" for="dropdownCheck-room-5">
+                                            5 +
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Filter Properties type -->
+                              <div id="filterProtype" class="top-additional--filter filter-protype">
+                                <div class="d-flex align-items-center filter__content">
+                                  <div class="dropdown-toggle filter--text filter-protype--text text--center"
+                                    data-toggle="dropdown">Loại bất động sản
+                                  </div>
+                                  <div class="dropdown-menu">
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input"
+                                            id="dropdownCheck-pro-apartment">
+                                          <label class="form-check-label" for="dropdownCheck-pro-apartment">
+                                            Căn hộ chung cư
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-officetel">
+                                          <label class="form-check-label" for="dropdownCheck-officetel">
+                                            Officetel
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-shophouse">
+                                          <label class="form-check-label" for="dropdownCheck-shophouse">
+                                            Shop house
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-house">
+                                          <label class="form-check-label" for="dropdownCheck-house">
+                                            Nhà riêng
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-cityhouse">
+                                          <label class="form-check-label" for="dropdownCheck-cityhouse">
+                                            Nhà phố liền kề
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-villa">
+                                          <label class="form-check-label" for="dropdownCheck-villa">
+                                            Biệt thự
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-condotel">
+                                          <label class="form-check-label" for="dropdownCheck-condotel">
+                                            Condotel
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-resort">
+                                          <label class="form-check-label" for="dropdownCheck-resort">
+                                            Biệt thự nghỉ dưỡng
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-bungalow">
+                                          <label class="form-check-label" for="dropdownCheck-bungalow">
+                                            Bungalow
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-land">
+                                          <label class="form-check-label" for="dropdownCheck-land">
+                                            Đất nền/ Đất dự án
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-official">
+                                          <label class="form-check-label" for="dropdownCheck-official">
+                                            Toà nhà văn phòng
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-hotel">
+                                          <label class="form-check-label" for="dropdownCheck-hotel">
+                                            Khách sạn
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content input-group">
+                                        <div class="form-check dropdown-item--checkbox">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck-mall">
+                                          <label class="form-check-label" for="dropdownCheck-mall">
+                                            Trung tâm thương mại
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Filter More -->
+                              <div id="filterMore" class="top-additional--filter filter-more">
+                                <div class="d-flex align-items-center filter__content">
+                                  <div class="dropdown-toggle filter--text filter-more--text text--center"
+                                    data-toggle="dropdown">Thêm</div>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <div class="land-square">
+                                          <div class="dropdown-item--title land-square--title">Diện tích đất</div>
+                                          <div class="d-flex">
+                                            <div class="form-group w-100 d-flex align-items-center">
+                                              <input type="range" class="form-control-range" id="landSquare" value="50"
+                                                min="0" max="150" step="1">
+                                              <label class="form-control-range-label" for="landSquare">150+
+                                                m&#178;</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <div class="land-usable">
+                                          <div class="dropdown-item--title land-usable--title">Diện sử dụng</div>
+                                          <div class="d-flex">
+                                            <div class="form-group w-100 d-flex align-items-center">
+                                              <input type="range" class="form-control-range" id="landUsable" value="40"
+                                                min="0" max="150" step="1">
+                                              <label class="form-control-range-label" for="landUsable">150+
+                                                m&#178;</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <div class="land-size">
+                                          <div class="land-size__container d-flex">
+                                            <div class="w-50 land-size__width">
+                                              <div class="dropdown-item--title land-size--title">Chiều ngang</div>
+                                              <div class="d-flex">
+                                                <div class="form-group w-100 d-flex align-items-center">
+                                                  <input type="text" class="form-control" id="landSizeWidth"
+                                                    placeholder="Ex: 8m">
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="w-50 land-size__long">
+                                              <div class="dropdown-item--title land-size--title text-right">Chiều dọc</div>
+                                              <div class="d-flex">
+                                                <div class="form-group w-100 d-flex align-items-center justify-content-end">
+                                                  <input type="text" class="form-control" id="landSizeLong"
+                                                    placeholder="Ex: 8m">
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <div class="house-info">
+                                          <div class="house-info__container d-flex justify-content-between">
+                                            <div class="w-30 house-bathroom">
+                                              <div class="dropdown-item--title house-info--title">Phòng tắm</div>
+                                              <div class="d-flex">
+                                                <div class="form-group w-100 d-flex align-items-center">
+                                                  <input type="number" class="form-control" id="houseBathroom" value="0">
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="w-30 house-floor">
+                                              <div class="dropdown-item--title house-info--title">Số tầng</div>
+                                              <div class="d-flex">
+                                                <div class="form-group w-100 d-flex align-items-center">
+                                                  <input type="number" class="form-control" id="houseFloor" value="0">
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="w-30 house-onroad">
+                                              <div class="dropdown-item--title house-info--title">Mặt tiền</div>
+                                              <input type="checkbox" class="form-control" id="houseOnroad">
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <div class="house-position">
+                                          <div class="house-position__container">
+                                            <div class="dropdown-item--title house-position--title">Hướng</div>
+                                            <div class="house-position__content d-flex flex-wrap align-items-center justify-content-between">
+                                              <div class="d-flex w-25">
+                                                <input type="checkbox" class="form-control" id="housePositionEast">
+                                                <label class="form-check-label" for="housePositionEast">Đông</label>
+                                              </div>
+                                              <div class="d-flex w-25">
+                                                <input type="checkbox" class="form-control" id="housePositionWest">
+                                                <label class="form-check-label" for="housePositionWest">Tây</label>
+                                              </div>
+                                              <div class="d-flex w-25">
+                                                <input type="checkbox" class="form-control" id="housePositionSouth">
+                                                <label class="form-check-label" for="housePositionSouth">Nam</label>
+                                              </div>
+                                              <div class="d-flex w-25">
+                                                <input type="checkbox" class="form-control" id="housePositionNorth">
+                                                <label class="form-check-label" for="housePositionNorth">Bắc</label>
+                                              </div>
+                                              <div class="d-flex w-25">
+                                                <input type="checkbox" class="form-control" id="housePositionEastNorth">
+                                                <label class="form-check-label" for="housePositionEastNorth">Đông
+                                                  Bắc</label>
+                                              </div>
+                                              <div class="d-flex w-25">
+                                                <input type="checkbox" class="form-control" id="housePositionWestNorth">
+                                                <label class="form-check-label" for="housePositionWestNorth">Tây
+                                                  Bắc</label>
+                                              </div>
+                                              <div class="d-flex w-25">
+                                                <input type="checkbox" class="form-control" id="housePositionEastSouth">
+                                                <label class="form-check-label" for="housePositionEastSouth">Đông
+                                                  Nam</label>
+                                              </div>
+                                              <div class="d-flex w-25">
+                                                <input type="checkbox" class="form-control" id="housePositionWestSouth">
+                                                <label class="form-check-label" for="housePositionWestSouth">Tây
+                                                  Nam</label>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- dropdown item -->
+                                    <div class="dropdown-item">
+                                      <div class="dropdown-item__content">
+                                        <div class="filter-more__tags">
+                                          <div class="dropdown-item--title category-info--title">Từ khoá</div>
+                                          <div class="d-flex"><input type="text" value="nghỉ dưỡng, Mặt tiền"
+                                              data-role="tagsinput"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            <!-- END FILTER FOR PROPERTIES -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filterBar__top--map-mode">
+                    <div class="map-mode">
+                      <div class="map-mode__container">
+                        <div class="map-mode__content">
+                          <div class="map-mode">
+                            <div class="row mode__content">
+                              <div class="select-mode mode-display">Bản đồ</div>
+                              <div class="select-mode mode-satellite">Vệ tinh</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-100 filterBar__share">
+                  <div class="share_content d-flex justify-content-end">
+                    <div class="share--btn">
+                      <img src="../../../assets/img/ic-share-black.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="filterBar__view">
+                  <div class="street-view">
+                    <div class="street-view__container">
+                      <div class="street-view__content">
+                        <div class="street-view--item outline-location">
+                          <div class="street-view--btn outline-location__content">
+                            <img src="../../../assets/img/outline-location.png" alt="">
+                          </div>
+                        </div>
+                        <div class="street-view--item baseline-view">
+                          <div class="street-view--btn baseline-view__content">
+                            <img src="../../../assets/img/baseline-view.png" alt="">
+                          </div>
+                        </div>
+                        <div class="street-view--item road-perspective">
+                          <div class="street-view--btn road-perspective__content">
+                            <span class="fa fa-road icon"></span>
+                          </div>
+                        </div>
+                        <div class="street-view--item baseline-trip">
+                          <div class="street-view--btn baseline-trip__content">
+                            <img src="../../../assets/img/baseline-trip.png" alt="" class="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Map notification -->
+        <div id="map-notification" class="map-notification">
+          <div class="map-notification__container">
+            <div class="d-flex map-notification__content justify-content-center">
+              <div class="notification--text">
+                Có quá nhiều BĐS / Dự án được tìm thấy nhưng chỉ hiển thị tối đa 500 đối tượng, zoom in bản đồ để xem
+                thêm
+              </div>
+              <div class="ml-2 notification--link">Đã hiểu</div>
+              <div class="notification--background"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Map Zoom -->
+        <div id="map-zoom" class="map-zoom">
+          <div class="map-zoom">
+            <div class="d-flex flex-column map-zoom">
+              <div class="map-zoom--item map-zoom--in">
+                <div class="map-zoom--btn zoom-in__content">
+                  <img src="../../../assets/img/baseline-in.png" alt="">
+                </div>
+              </div>
+              <div class="map-zoom--item map-zoom--out">
+                <div class="map-zoom--btn zoom-out__content">
+                  <img src="../../../assets/img/baseline-out.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div class="map-mobile row flex-xl-nowrap d-xl-none">
+    <div class="container">
+      <div id="m1-header_mobile" class="homepage-header_mobile d-xl-none">
+        <div class="m1-header_mobile__container">
+          <div class="m1-header_mobile__content d-flex justify-content-between">
+            <div class="m1-menu_mobile__drawer d-flex align-items-center">
+              <div class="mobile-drawer__content">
+                <div class="drawer-toggler" data-toggle="modal" data-target="#drawerToggleExternalContentMobile"
+                  aria-controls="drawerToggleExternalContentMobile" aria-expanded="false" aria-label="Toggle navigation">
+                  <img src="../../assets/img/icon-drawer.png" alt="">
+                </div>
+                <div class="modal fadeInRight" id="drawerToggleExternalContentMobile" tabindex="-1" role="dialog"
+                  aria-labelledby="drawerToggleExternalContentMobile" aria-hidden="true">
+                  <div class="modal-content">
+                    <nav class="mobile-navbar">
+                      <div class="mobile-navbar__content">
+                        <a class="navbar-brand" href="/">
+                          <img src="../../assets/img/asset-logo.png" alt="">
+                        </a>
+                        <div class="navbar__items">
+                          <div class="navbar--item">
+                            <a href="/ket-qua/thong-tin">Thông tin</a>
+                          </div>
+                          <div class="navbar--item">
+                            <a href="/ban-do">Bản đồ</a>
+                          </div>
+                          <div class="navbar--item">
+                            <a href="/ket-qua/bang-gia">Bảng giá</a>
+                          </div>
+                          <div class="navbar--item">
+                            <a href="#">Danh bạ</a>
+                          </div>
+                          <div class="navbar--item">
+                            <a href="#">Tài nguyên</a>
+                          </div>
+                          <div class="navbar--item">
+                            <a href="#">Hỏi đáp</a>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m1-menu_mobile__items d-flex align-items-center">
+              <div class="m1-menu--item dropdown dropdown__menu-tool">
+                <div class="dropdown-toggle" data-toggle="dropdown">
+                  <img class="img_menu" src="../../assets/img/Group 1.png" alt="">
+                </div>
+                <div class="dropdown-menu menu-tool">
+                  <div class="dropdown-item">
+                    <a href="#">
+                      <img src="../../assets/img/Group 1569.png" alt=""><span class="menu-tool--text">Tính toán khoản
+                        vay</span>
+                    </a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="#">
+                      <img src="../../assets/img/baseline-insert_chart-24px.png" alt=""><span
+                        class="menu-tool--text">Tính toán hiệu quả dự án</span>
+                    </a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="#">
+                      <img src="../../assets/img/baseline-monetization_on-24px.png" alt=""><span
+                        class="menu-tool--text">Tài chính cá nhân</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="m1-menu--item">
+                <div class="menu-notify">
+                  <a href="#"><img src="../../assets/img/Group 22.png" alt=""></a>
+                </div>
+              </div>
+              <div class="m1-menu--item">
+                <a class="btn-login" href="/dang-nhap">
+                  <img src="../../assets/img/icon-avatar.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="m1-body" class="homepage-body">
+        <div class="m1-body__container h-100">
+          <div class="m1-body__content h-100 d-flex flex-column justify-content-center">
+            <div class="map-mobile d-flex flex-column align-items-center">
+              <img src="../../../assets/img/baseline-mobile.png" alt="">
+              <span class="map-mobile-off">Mobile off</span>
+              <span class="map-mobile--notify">Hãy trải nghiệm chức năng này trên desktop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="m1-footer" class="homepage-footer">
+        <div class="m1-footer__container">
+          <div class="m1-footer__content">
+            <div class="m1-footer-1">
+              <a href="#">Giới thiệu</a>
+              <a href="#">Hướng dẫn</a>
+            </div>
+            <div class="m1-footer-2 d-none d-sm-block">
+              <div class="d-flex m1-footer-2__content">
+                <marquee class="footer-2--left">
+                  <div class="view1__content">
+                    <span><span>Tin nhanh: </span> Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                      sollicitudin,
+                      lorem quis biben <a href="#">Xem nhanh</a></span>
+                  </div>
+                </marquee>
+                <marquee class="footer-2--right">
+                  <div class="view2__content">
+                    <span><span> Giá bán: </span>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                      sollicitudin,
+                      lorem quis biben</span>
+                  </div>
+                </marquee>
+              </div>
+            </div>
+            <div class="m1-footer-2 d-sm-none">
+              <div class="d-flex m1-footer-2__content">
+                <marquee class="footer-2">
+                  <div class="view1__content">
+                    <span><span>Tin nhanh: </span> Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                      sollicitudin,
+                      lorem quis biben <a href="#">Xem nhanh</a></span>
+                    <span><span> Giá bán: </span>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                      sollicitudin,
+                      lorem quis biben</span>
+                  </div>
+                </marquee>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CHAT SIDEBAR -->
+  <div id="chat-sidebar" class="chat-sidebar collapsed d-none d-xl-block">
+    <div class="chat-sidebar__container">
+      <div class="chat-sidebar__content d-flex flex-column justify-content-between">
+        <!-- Chat Sidebar Top -->
+        <div class="chat-sidebar__top">
+          <div class="chat-sidebar--btn-collapse">
+            <div class="btn-expand__content">
+              <button id="btn-chat--expand" class="btn btn-chat--expand">
+                <img src="../../../assets/img/Path 115.png" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Chat Sidebar Bottom -->
+        <div class="chat-sidebar__bottom">
+          <!-- Chat list -->
+          <div class="chat-sidebar__list chat-list">
+            <div class="chat-list__container">
+              <div class="chat-list__content">
+                <div class="chat-list__contact">
+                  <div class="chat-list--contact-items">
+                    <!-- Contact items -->
+                    <div class="contact-items contact-items__active">
+                      <!-- Contact item -->
+                      <div class="contact-item d-flex justify-content-center">
+                        <div class="contact-item--avatar">
+                          <img src="../../../assets/img/chat-avt-1.png" alt="">
+                        </div>
+                        <div class="contact-item--name">Lê Ánh Hồng Nga</div>
+                        <div class="contact-item--status">
+                          <img src="../../../assets/img/icon-chat-active.png" alt="">
+                        </div>
+                      </div>
+                      <!-- Contact item -->
+                      <div class="contact-item d-flex justify-content-center">
+                        <div class="contact-item--avatar">
+                          <img src="../../../assets/img/chat-avt-2.png" alt="">
+                        </div>
+                        <div class="contact-item--name">Peter Parker</div>
+                        <div class="contact-item--status">
+                          <img src="../../../assets/img/icon-chat-active.png" alt="">
+                        </div>
+                      </div>
+                      <!-- Contact item -->
+                      <div class="contact-item d-flex justify-content-center">
+                        <div class="contact-item--avatar">
+                          <img src="../../../assets/img/chat-avt-3.png" alt="">
+                        </div>
+                        <div class="contact-item--name">Tom Hank</div>
+                        <div class="contact-item--status">
+                          <img src="../../../assets/img/icon-chat-active.png" alt="">
+                        </div>
+                      </div>
+                      <!-- Contact item -->
+                      <div class="contact-item d-flex justify-content-center">
+                        <div class="contact-item--avatar">
+                          <img src="../../../assets/img/chat-avt-4.png" alt="">
+                        </div>
+                        <div class="contact-item--name">Amy Lee Johnson</div>
+                        <div class="contact-item--status">
+                          <img src="../../../assets/img/icon-chat-active.png" alt="">
+                        </div>
+                      </div>
+                      <!-- Contact item -->
+                      <div class="contact-item d-flex justify-content-center">
+                        <div class="contact-item--avatar">
+                          <img src="../../../assets/img/chat-avt-5.png" alt="">
+                        </div>
+                        <div class="contact-item--name">Picasa Poo</div>
+                        <div class="contact-item--status">
+                          <img src="../../../assets/img/icon-chat-active.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Contact items -->
+                    <div class="contact-items contact-items__inactive">
+                      <!-- Contact item -->
+                      <div class="contact-item d-flex justify-content-center">
+                        <div class="contact-item--avatar">
+                          <img src="../../../assets/img/chat-avt-6.png" alt="">
+                        </div>
+                        <div class="contact-item--name">Jessica Snow</div>
+                        <div class="contact-item--status">
+                          <img src="../../../assets/img/icon-chat-active.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Chat message -->
+          <div class="chat-sidebar__chat-message">
+            <div class="chat-message__container">
+              <div class="chat-message__content">
+                <div class="chat-message d-flex justify-content-center align-items-center">
+                  <div class="chat-message--icon">
+                    <img src="../../../assets/img/chat-message.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Chat Search -->
+          <div class="chat-sidebar__search-input">
+            <div class="search-input">
+              <div class="search-input__container">
+                <div class="search-input__content">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="search-icon">
+                        <img src="../../../assets/img/SVG/search.svg" alt="">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Tìm kiếm bạn bè" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Chat pop-up -->
+          <div id="chat-sidebar__pop-up">
+            <div class="chat-popup">
+              <div class="chat-popup__container">
+                <div class="chat-popup__content">
+                  <div id="chat-popup__items" class="chat-popup__items">
+                    <div class="chat-popup--item">
+                      <div class="chat-popup--header d-flex">
+                        <div class="chat-popup--status">
+                          <img src="../../../assets/img/icon-chat-active.png" alt="">
+                        </div>
+                        <span class="ml-2 header--text">Test</span>
+                        <div class="chat-popup--close">&#215;</div>
+                      </div>
+                      <div class="chat-popup--body">
+                        <div class="message-received">
+                          <div class="message-received__content row">
+                            <div class="col-2 px-0 received__content--icon">
+                              <img src="../../../assets/img/chat-avt-1.png" alt="">
+                            </div>
+                            <div class="col-10 received__content--text">
+                              <span>KHLCNT của Ban Quản lý dự án đầu tư xây .... KHLCNT của Sở Tài chính tỉnh Hưng Yên
+                                cho dự
+                                án “Mua sắm thiết bị định .... Hạng mục: Xóm Ao Vàng, Cổ Rùa, Gò Chè, Phúc Lộc, Quyết
+                                Thắng, Tân ...</span>
+                            </div>
+                            <div class="col-12 received__content--time text-right">
+                              <span>12:09 - 18/10/2019</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="message-send">
+                          <div class="message-send__content row align-items-end flex-column">
+                            <div class="message-send--text">
+                              <span>OK</span>
+                            </div>
+                            <div class="message-send--time text-right"><span>1 min</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="chat-popup--input">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Nhập tin nhắn" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                          <div class="input-group-append">
+                            <div class="send-icon">
+                              <img src="../../../assets/img/icon-send.png" alt="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- DRAWER BAR -->
+  <div class="dt-menu__drawer d-flex align-items-center">
+    <div class="menu-drawer__content">
+      <div class="modal fadeInRight" id="drawerToggleExternalContent" tabindex="-1" role="dialog"
+        aria-labelledby="drawerToggleExternalContent" aria-hidden="true">
+        <div class="modal-content">
+          <nav class="dt-navbar">
+            <div class="dt-navbar__content">
+              <a class="dt-navbar--brand" href="/">
+                <img src="../../assets/img/asset-logo.png" alt="">
+              </a>
+              <div class="dt-navbar__user">
+                <div class="navbar-user__content d-flex align-items-center">
+                  <div class="user--avatar">
+                    <img src="../../assets/img/icon-avatar.png" alt="">
+                  </div>
+                  <div class="user--infor">
+                    <div class="user-infor__content">
+                      <div class="user--name">Huỳnh Thị Diệu Thương</div>
+                      <div class="user--rate">
+                        <div class="user-rate__content d-flex align-items-center">
+                          <span class="user-rate__name">[Chuyên gia <span
+                              class="user-rate__level">4.5+</span></span><img class="user-rate__icon"
+                            src=" ../../../assets/img/SVG/star.svg" alt="">]
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user--menu">
+                    <div class="user-menu__content d-flex align-items-center">
+                      <div class="menu--item dropdown dropdown-right dropdown__menu-tool">
+                        <div class="dropdown-toggle" data-toggle="dropdown">
+                          <img class="img_menu" src="../../assets/img/Group 1.png" alt="">
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-right menu-tool">
+                          <div class="dropdown-item">
+                            <a href="#">
+                              <img src="../../assets/img/Group 1569.png" alt=""><span class="menu-tool--text">Tính toán
+                                khoản
+                                vay</span>
+                            </a>
+                          </div>
+                          <div class="dropdown-item">
+                            <a href="#">
+                              <img src="../../assets/img/baseline-insert_chart-24px.png" alt=""><span
+                                class="menu-tool--text">Tính toán hiệu quả dự án</span>
+                            </a>
+                          </div>
+                          <div class="dropdown-item">
+                            <a href="#">
+                              <img src="../../assets/img/baseline-monetization_on-24px.png" alt=""><span
+                                class="menu-tool--text">Tài chính cá nhân</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="menu--item">
+                        <div class="menu-notify">
+                          <a href="#"><img src="../../assets/img/Group 22.png" alt=""></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dt-navbar__items">
+                <a class="dt-navbar--item" href="/ket-qua/thong-tin">Thông tin</a>
+                <a class="dt-navbar--item" href="/ket-qua/bang-gia">Bảng giá</a>
+                <a class="dt-navbar--item" href="#">Thêm</a>
+              </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Include scripts -->
+  <!-- Includes scripts -->
+  <script type="text/javascript" src="../../../assets/scripts/bootstrap-tagsinput.min.js"></script>
+  <script type="text/javascript" src="../../../assets/scripts/chat/chatSideBar.js"></script>
+  <script type="text/javascript" src="../../../assets/scripts/resultpage/map/filterBar.js"></script>
+</body>
+
+</html>
