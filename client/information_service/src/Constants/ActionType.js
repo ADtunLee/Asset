@@ -1,1 +1,2 @@
 export const HOME_SEARCH = 'HOME_SEARCH'
+export const HOME_INPUT_SEARCH = 'HOME_INPUT_SEARCH'

@@ -12,6 +12,7 @@ class Input extends Component {
         var target = e.target;
         var name = target.name;
         var value = target.value
+        this.props.onSearch(value)
         this.setState({
             [name]: value
         });

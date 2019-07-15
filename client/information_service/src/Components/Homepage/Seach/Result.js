@@ -9,6 +9,7 @@ class Result extends Component {
     }
 
     render() {
+        console.log(filteredSuggestions)
         var { filteredSuggestions } = this.props;
         if (Array.isArray(filteredSuggestions) && filteredSuggestions.length) {
             var suggestionsListComponent = (

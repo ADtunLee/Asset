@@ -7,15 +7,15 @@ export const SearchByKeywordRequest = (keyword) => {
             `search?key=${keyword}&limit=${Config.LIMIT_SEARCH_RESULT}`,
             'GET',
             {}
-        ).then(result=>{
-            console.log(result)
-            SearchByKeyword(result.data)
+        ).then(result => {
+            dispatch(SearchByKeyword(result.data,keyword))
         })
     }
 }
-export const SearchByKeyword = (data) =>{
+export const SearchByKeyword = (data,keyword) => {
     return {
-        type : Types.HOME_SEARCH,
-        data:data
+        type: Types.HOME_SEARCH,
+        data: data,
+        keyword
     }
 }

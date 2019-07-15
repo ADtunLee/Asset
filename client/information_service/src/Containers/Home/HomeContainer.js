@@ -1,3 +1,4 @@
+//import libery
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
@@ -12,24 +13,23 @@ import Input from '../../Components/Homepage/Seach/Input'
 import Result from '../../Components/Homepage/Seach/Result'
 
 //import Actions
-import { SearchByKeywordRequest } from '../../Actions/HomeAction'
+import { SearchByKeywordRequest, InputSearchByKeyword } from '../../Actions/HomeAction'
 
 class HomeContainer extends Component {
 
-    onSearch = (keyword) => {
-        return this.props.SearchByKeyword(keyword);
-    }
     render() {
+        var { searchList } = this.props
+        console.log(searchList)
         return (
             <Home>
                 <HomeNav></HomeNav>
                 <HomeMobileNav></HomeMobileNav>
                 <Body>
                     <Search>
-                        <Input >
+                        <Input onSearch={this.props.SearchByKeyword}>
                             <Result
-                                filteredSuggestions={[{title:'kinh'}]}
-                                onSearch={this.onSearch}>
+                                filteredSuggestions={searchList}
+                                onResultClick={this.onResultClick}>
                             </Result>
                         </Input>
 
@@ -42,15 +42,14 @@ class HomeContainer extends Component {
     }
 }
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
-        search: state.search
+        searchList: state.search.ListSearchString
     }
 }
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        SearchByKeyword: (keyword) =>{
+        SearchByKeyword: (keyword) => {
             dispatch(SearchByKeywordRequest(keyword))
         }
     }
