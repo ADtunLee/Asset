@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { AddScriptTag } from './Constants/Config'
-import NotFound from './Components/NotFound'
 //config route
-import routes from './Routes'
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+
+import HomeContainer from './Containers/Home/HomeContainer'
+import NotFound from './Components/NotFound'
+import SearchResultLayout from './Containers/Layout/SearchResultLayout'
+import NewContainer from './Containers/Result/NewContainer'
 class App extends Component {
     constructor(props) {
         super(props);
@@ -11,33 +14,14 @@ class App extends Component {
             status: 'start'
         };
     }
-    showContentMenus = (routes) => {
-        var result = null;
-        if (routes.length > 0) {
-            result = routes.map((route, index) => {
-                return (
-                    <Route
-                        key={index}
-                        path={route.path}
-                        exact={route.exact}
-                        component={route.main}
-                    />
-                );
-            });
-        }
-        return (
-            <Switch>
-              
-                {result}
-                <Route component={NotFound}></Route>
-            </Switch>
-        );
-    }
     render() {
 
         return (
             <Router>
-                {this.showContentMenus(routes)}
+                <Switch>
+                    <Route path="/" exact component={HomeContainer}></Route>
+                    <Route path="/ket-qua" component={SearchResultLayout}></Route>
+                </Switch>
             </Router>
         );
     }

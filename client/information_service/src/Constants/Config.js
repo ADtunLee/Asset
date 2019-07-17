@@ -18,10 +18,12 @@ export const AddLinkTag = (listScript, element) => {
     if (!Array.isArray(listScript)) { return false }
     else {
         listScript.forEach((value) => {
-            var script = document.createElement("script");
-            script.src = value
-            script.async = true
-            element.appendChild(script);
+            var link = document.createElement("link");
+            link.href = value
+            link.rel = 'stylesheet'
+            link.type ='text/css'
+            link.async = true
+            element.appendChild(link);
         });
     }
     return true;

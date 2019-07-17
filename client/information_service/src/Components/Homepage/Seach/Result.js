@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
 class Result extends Component {
-
+    
 
     onSearch = (suggestionTitle) => {
-        this.props.onSearch(suggestionTitle)
+        this.props.onResultClick(suggestionTitle)
     }
 
     render() {

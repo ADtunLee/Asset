@@ -16,6 +16,6 @@ export const SearchByKeyword = (data,keyword) => {
     return {
         type: Types.HOME_SEARCH,
         data: data,
-        keyword
+        keyword:keyword
     }
 }

@@ -12,7 +12,6 @@ class Search extends Component {
         );
     }
 }
-
 Search.propTypes = {
 
 };

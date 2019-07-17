@@ -1,42 +1,39 @@
 //import libery
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-
+import { Redirect } from 'react-router-dom'
 //import Components
-import Home from '../../Components/Homepage/Home'
-import Footer from '../../Components/Homepage/Footer'
 import Body from '../../Components/Homepage/Body'
-import HomeNav from '../../Components/Menu/HomeNav'
-import HomeMobileNav from '../../Components/Menu/HomeMobileNav'
 import Search from '../../Components/Homepage/Seach/Search'
 import Input from '../../Components/Homepage/Seach/Input'
 import Result from '../../Components/Homepage/Seach/Result'
-
+import HomeLayout from '../Layout/HomeLayout'
 //import Actions
 import { SearchByKeywordRequest, InputSearchByKeyword } from '../../Actions/HomeAction'
 
 class HomeContainer extends Component {
-
+    state = {
+        redirect: false
+    }
+    onResultClick = (keyword) => {
+        console.log(keyword)
+    }
     render() {
         var { searchList } = this.props
         console.log(searchList)
         return (
-            <Home>
-                <HomeNav></HomeNav>
-                <HomeMobileNav></HomeMobileNav>
+            <HomeLayout>
                 <Body>
-                    <Search>
+                    <Search >
                         <Input onSearch={this.props.SearchByKeyword}>
                             <Result
                                 filteredSuggestions={searchList}
                                 onResultClick={this.onResultClick}>
                             </Result>
                         </Input>
-
                     </Search>
                 </Body>
-                <Footer></Footer>
-            </Home>
+            </HomeLayout>
 
         );
     }
@@ -50,6 +47,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch, props) => {
     return {
         SearchByKeyword: (keyword) => {
+            dispatch(SearchByKeywordRequest(keyword))
+        },
+        onResultClick: (keyword) => {
             dispatch(SearchByKeywordRequest(keyword))
         }
     }
